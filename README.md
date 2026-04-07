@@ -1,3 +1,14 @@
+# Checkpoint 5 – Python básico
+
+Documentación en lenguaje Markdown para principiantes sobre:
+condicionales, bucles, listas por comprensión, argumentos, funciones lambda y pip.
+
+Autor: Majid 
+
+Curso: Full Stack / Módulo Python
+
+---
+
 # ¿Qué son los **condicionales**?
 
 **Los condicionales son estructuras de control que permiten que un programa tome decisiones basadas en ciertas condiciones.**
