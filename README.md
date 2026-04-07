@@ -106,12 +106,6 @@ while contador <= 5:
 # 1 2 3 4 5
 ```
 
-⚙️ Controladores útiles:
-
-- `break`: sale del bucle inmediatamente  
-- `continue`: salta a la siguiente iteración  
-
----
 
 ### 📊 Ejemplo `while` → paso a paso
 
