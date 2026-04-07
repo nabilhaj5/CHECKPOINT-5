@@ -3,7 +3,7 @@
 Documentación en lenguaje Markdown para principiantes sobre:
 condicionales, bucles, listas por comprensión, argumentos, funciones lambda y pip.
 
-Autor: Majid 
+Autor: Majid
 
 Curso: Full Stack / Módulo Python
 
@@ -73,6 +73,15 @@ else:
 
 **Python tiene 2 bucles principales: for (itera secuencias conocidas) y while (repite mientras condición verdadera). Son útiles para automatizar repeticiones evitando código duplicado.**
 
+# 📚 **Explicación con foto y ejemplo:**
+
+![Diagrama bucles](images/loops1.jpg)
+
+
+- **Loops** (amarillo): Contenedor bucles
+- **while** (rojo): Repite mientras condición
+- **for** (azul): Itera secuencia fija
+
 ### 🌀 Tipos de bucles:
 
 | Bucle | Cuándo usar | Ejemplo |
@@ -81,19 +90,14 @@ else:
 | `while` | Condición cambia | `while contador < 5:` |
 
 
-## **Resumen final de la Pregunta 2:**
- En un bucle while, el programa repite un bloque de código mientras se cumple una condición general; esa condición se mira en cada vuelta y decide si el bucle sigue o se para.
+### Sintaxis básica de `for` y `while`
 
- En un bucle for, primero decidimos la colección de elementos (lista, rango, texto…) y luego el mismo código se ejecuta para cada uno de esos elementos, uno detrás de otro.
-
-
-### **Sintaxis completa:**
 ```python
-
 for letra in "Python":
     print(letra)
 # P y t h o n
 ```
+
 ```python
 contador = 1
 while contador <= 5:
@@ -101,73 +105,79 @@ while contador <= 5:
     contador += 1
 # 1 2 3 4 5
 ```
-⚙️ Controladores útiles:
-
-break: sale del bucle inmediatamente
-
-continue: salta a la siguiente iteración
-
-```python
-contador = 1          # ← INICIO: contador vale 1
-
-while contador <= 5:  # ← PREGUNTA: ¿1≤5? → SÍ (entra)
-    print(contador)   # Imprime: 1
-    contador += 1     # ← AUMENTA: 1→2
-```
-**Iteraciones:**
-1. **¿1≤5? → SÍ** → Imprime 1 → 2
-2. **¿2≤5? → SÍ** → Imprime 2 → 3
-3. **¿3≤5? → SÍ** → Imprime 3 → 4
-4. **¿4≤5? → SÍ** → Imprime 4 → 5
-5. **¿5≤5? → SÍ** → Imprime 5 → 6
-6. **¿6≤5? → NO** → **SALIDA** ✓
-
-## 📊 Ejemplo while → **Paso a PASO**:
-**Salida:** `1 2 3 4 5`
-
-# 📚 **Explicación con foto y ejemplo:**
-
-![Diagrama bucles](images/loops1.jpg)
-- **Loops** (amarillo): Contenedor bucles
-- **while** (rojo): Repite mientras condición
-- **for** (azul): Itera secuencia fija
-
-### 🔄 While paso a paso:
-```python
-contador = 1
-while contador <= 5:
-    print(contador)
-    contador += 1
-```
-**Explicación:**
-- `contador = 1` ← **INICIO**
-- `while <= 5` ← **PREGUNTA cada vuelta**
-- `print()` ← **EJECUTA**
-- `+= 1` ← **AVANZA** (¡clave!)
-
-### **Sintaxis completa:**
-```python
-for fruta in ["manzana", "banana", "sandía"]:
-    if fruta == "sandía":
-        break       # PARA
-    print(fruta)    # manzana banana
-```
-💡 ¿Por qué útiles?
-Automatizan tareas repetitivas
-
-Evitan copiar código 100 veces
 
 ⚙️ Controladores útiles:
 
 - `break`: sale del bucle inmediatamente  
-- `continue`: salta a la siguiente iteración
+- `continue`: salta a la siguiente iteración  
 
+---
+
+### 📊 Ejemplo `while` → paso a paso
+
+```python
+contador = 1          # INICIO: contador vale 1
+
+while contador <= 5:  # PREGUNTA: ¿contador <= 5?
+    print(contador)   # Imprime el valor actual
+    contador += 1     # AUMENTA el contador en 1
+```
+
+**Iteraciones:**
+
+1. ¿1 ≤ 5? → SÍ → imprime 1 → contador pasa a 2  
+2. ¿2 ≤ 5? → SÍ → imprime 2 → contador pasa a 3  
+3. ¿3 ≤ 5? → SÍ → imprime 3 → contador pasa a 4  
+4. ¿4 ≤ 5? → SÍ → imprime 4 → contador pasa a 5  
+5. ¿5 ≤ 5? → SÍ → imprime 5 → contador pasa a 6  
+6. ¿6 ≤ 5? → NO → sale del bucle ✓  
+
+**Salida en pantalla:** `1 2 3 4 5`
+
+---
+
+### 🔄 While paso a paso (resumen)
+
+- `contador = 1` ← INICIO  
+- `while contador <= 5` ← PREGUNTA en cada vuelta  
+- `print(contador)` ← EJECUTA la acción  
+- `contador += 1` ← AVANZA el contador (clave para no bucle infinito)  
+
+---
+
+### Ejemplo `for` con `break`
+
+```python
+for fruta in ["manzana", "banana", "sandía"]:
+    if fruta == "sandía":
+        break       # PARA el bucle
+    print(fruta)    # manzana banana
+```
+
+💡 ¿Por qué útiles?
+
+- Automatizan tareas repetitivas.  
+- Evitan copiar el mismo código 100 veces.  
+
+⚙️ Controladores útiles:
+
+- `break`: sale del bucle inmediatamente.  
+- `continue`: salta a la siguiente iteración.
+
+---
+
+## Resumen final de la Pregunta 2
+
+En un **bucle `while`**, el programa repite un bloque de código mientras una condición general se cumpla; esa condición se comprueba en cada vuelta y decide si el bucle sigue o se detiene.
+
+En un **bucle `for`**, primero elegimos la colección de elementos (lista, rango, texto…) y luego el mismo código se ejecuta para cada uno de esos elementos, uno detrás de otro.
 
 
 [![🧪 Abrir ejemplo](https://img.shields.io/badge/🧪-Abrir-brightgreen?style=for-the-badge&logo=jupyter)](pregunta2.ipynb)
 
 ## Pregunta 3
 
+# ¿Qué es una lista por comprensión en Python?
 
 Es una forma **CORTA** de crear listas con for en 1 línea. Sintaxis: [expresión for elemento in iterable]
 Las comprensiones no solo son más concisas en sintaxis si no que, en ocasiones, también pueden ser más rápidas que las construcciones equivalentes usando bucles for.
@@ -246,6 +256,8 @@ print(grandes)  # [8] ✓
 
 ## Pregunta 4 
 
+# ¿Qué es un argumento en Python?
+
 En Python, un argumento es el dato que le pasamos a una función cuando la llamamos, para que esa función pueda trabajar con él.
 Gracias a los argumentos, una misma función se puede reutilizar con valores diferentes sin cambiar su código.
 
@@ -293,6 +305,9 @@ Dentro de la función trabajamos siempre con el parámetro, no con el valor en s
 
 ## Pregunta 5
 
+# ¿Qué es una función Lambda en Python?
+
+
 En Python, una **función lambda** es una función pequeña y sin nombre (anónima) que se escribe en una sola línea.  
 Se usa cuando necesitamos una función rápida y sencilla, normalmente de forma temporal o como argumento de otra función.
 
@@ -339,6 +354,8 @@ Se usan mucho junto con `map()`, `filter()` o `reduce()` cuando queremos pasar u
 [![🧪 Abrir ejemplo](https://img.shields.io/badge/🧪-Abrir-brightgreen?style=for-the-badge&logo=jupyter)](pregunta5.ipynb)
 
 ## Pregunta 6
+
+# ¿Qué es un paquete pip?
 
 En Python, pip es el gestor de paquetes oficial del lenguaje y
 Permite instalar paquetes externos desde PyPI, que es el repositorio oficial de paquetes de Python.
